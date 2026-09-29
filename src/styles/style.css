@@ -1,53 +1,100 @@
-* {
-  box-sizing: border-box;
-}
+* { 
+  box-sizing: border-box; 
+} 
+ 
+body { 
+  margin: 0; 
+  font-family: system-ui, sans-serif; 
+  background: #10141d; 
+  color: #f4f6fb; 
+} 
+ 
+.app { 
+  max-width: 960px; 
+  margin: 0 auto; 
+  padding: 24px; 
+} 
+ 
+.filtros { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin: 16px 0; 
+} 
+ 
+.filtros input, 
+.filtros select { 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  border: 1px solid #333; 
+  background: #172033; 
+  color: inherit; 
+} 
+ 
+.personajes-grid { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+} 
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #10141d;
-  color: #f4f6fb;
-}
-
-.app {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 16px 0;
-}
-
-.filtros input,
-.filtros select {
+.filtros button {
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #333;
   background: #172033;
   color: inherit;
+  cursor: pointer;
 }
 
-/* TODO: dale layout a .personajes-grid con CSS Grid o con Flexbox.
-   Compara las dos versiones en "Grid vs Flex" antes de decidir cuál usar aquí. */
-.personajes-grid {
+.filtros button:hover {
+  background: #22304a;
+}
+
+.filtros label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#resumen {
+  margin: 8px 0;
+  color: #c8ceda;
+}
+
+#mensaje-muertos {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #4a2020;
+  color: #ffb3b3;
 }
 
 .personaje-card {
   background: #172033;
   border-radius: 12px;
   overflow: hidden;
+  position: relative;
 }
 
-.personaje-card img {
-  width: 100%;
-  display: block;
+.personaje-card > span {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 7px;
+  border-radius: 8px;
+  background: #38451f;
+  color: #d8f5a2;
+  font-size: 12px;
+  font-weight: bold;
 }
-
-.personaje-card h3,
-.personaje-card p {
-  margin: 8px 12px;
+ 
+.personaje-card img { 
+  width: 100%; 
+  display: block; 
+} 
+ 
+.personaje-card h3, 
+.personaje-card p { 
+  margin: 8px 12px; 
 }
